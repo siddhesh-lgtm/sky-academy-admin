@@ -259,7 +259,7 @@ tr:last-child td{border-bottom:0}
 }
 
 /* ===== All modules shared polish ===== */
-.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:16px}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:16px}
 .stat{background:#fff;border:1px solid #e3e9f1;border-radius:16px;padding:18px;box-shadow:0 10px 24px #18294508}
 .stat-top{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px;color:#75849a;font-weight:600}
 .stat strong{display:block;margin-top:10px;font-size:28px;line-height:1.1;color:#14233d;font-family:'Outfit',sans-serif}
