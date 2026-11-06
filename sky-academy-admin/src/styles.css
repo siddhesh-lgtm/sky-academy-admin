@@ -197,6 +197,27 @@ th{font-size:12.5px !important}
 .attention-item b{display:block;font-size:14px;color:#1e2f4a}
 .attention-item small{display:block;margin-top:3px;font-size:12px;color:#6b7c94}
 
+/* ===== Login (Center Admin / Super Admin / Finance) ===== */
+.login-screen{min-height:100vh;display:grid;place-items:center;padding:24px;background:linear-gradient(145deg,#0f1729 0%,#1a3258 45%,#243b67 100%)}
+.login-card{width:100%;max-width:420px;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 24px 60px #06122766}
+.login-brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.login-brand strong{display:block;font-family:'Outfit',sans-serif;font-size:18px;color:#12366c}
+.login-brand strong span{color:#1a9e8c}
+.login-brand small{display:block;color:#6b7c94;font-size:12px;margin-top:2px}
+.login-card h1{margin:0 0 6px;font-size:26px;color:#14233d}
+.login-sub{margin:0 0 18px;font-size:13px;color:#6b7c94;line-height:1.45}
+.login-form{display:grid;gap:12px}
+.login-form .btn{width:100%;justify-content:center;margin-top:4px}
+.password-row{display:flex;align-items:center;gap:6px;border:1px solid #d7e1ee;border-radius:11px;background:#f7f9fc;padding-right:4px}
+.password-row input{border:0;background:transparent;flex:1;padding:12px 13px;outline:none;font-size:14px;color:#1e2f4a}
+.login-error{background:#fff0f0;color:#c44c5e;border:1px solid #f1c8cd;border-radius:10px;padding:10px 12px;font-size:13px;font-weight:600}
+.login-hint{margin-top:18px;padding:14px;border-radius:12px;background:#f3f7ff;border:1px solid #d7e4f7;display:grid;gap:2px}
+.login-hint b{color:#1e2f4a;font-size:13px}
+.login-hint span{font-family:ui-monospace,monospace;font-size:12px;color:#31455f}
+.login-hint small{margin-top:4px;color:#6b7c94;font-size:12px}
+.role-meta{padding:4px 12px 10px;font-size:12px;color:#6b7c94;border-bottom:1px solid #eef2f7;margin-bottom:4px}
+.role-dropdown button{display:flex;align-items:center;gap:8px;width:100%}
+
 /* ===== Global UI polish ===== */
 .page-head{align-items:flex-start;margin-bottom:18px}
 .page-head h1{font-size:28px;letter-spacing:-.03em;margin:4px 0 6px}
