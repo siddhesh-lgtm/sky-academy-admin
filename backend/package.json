@@ -1,0 +1,19 @@
+{
+  "name": "sky-academy-api",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:schema": "mysql -u root < sql/002_full_35_tables.sql",
+    "db:seed": "mysql -u root < sql/003_seed_cricket.sql",
+    "db:reset": "npm run db:schema && npm run db:seed"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0"
+  }
+}
