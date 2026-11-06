@@ -197,6 +197,23 @@ th{font-size:12.5px !important}
 .attention-item b{display:block;font-size:14px;color:#1e2f4a}
 .attention-item small{display:block;margin-top:3px;font-size:12px;color:#6b7c94}
 
+/* ===== Center Admin coaching dashboard ===== */
+.center-hero{display:flex;justify-content:space-between;gap:18px;align-items:stretch;flex-wrap:wrap;margin:0 0 16px;padding:20px 22px;border-radius:18px;background:linear-gradient(135deg,#111d33 0%,#1a3a63 55%,#1ec9ba 160%);color:#fff;box-shadow:0 14px 32px #15253f24;border:1px solid #2a4060}
+.center-hero-main{display:flex;gap:14px;align-items:center;min-width:240px}
+.center-hero-mark{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#ffffff18;color:#6fe9d6;flex-shrink:0}
+.center-hero-main small{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;color:#6fe9d6}
+.center-hero-main h2{margin:4px 0 2px;font-size:22px;color:#fff;letter-spacing:-.02em}
+.center-hero-main p{margin:0;font-size:13px;color:#b7c9df}
+.center-hero-metrics{display:grid;grid-template-columns:repeat(4,minmax(72px,1fr));gap:10px;flex:1;min-width:280px}
+.center-hero-metrics>div{background:#ffffff14;border:1px solid #ffffff22;border-radius:12px;padding:10px 12px;text-align:center}
+.center-hero-metrics b{display:block;font-family:'Outfit',sans-serif;font-size:20px;color:#fff;line-height:1.1}
+.center-hero-metrics span{display:block;margin-top:4px;font-size:11px;color:#9eb4d0;font-weight:600}
+.stats-grid.center-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:16px}
+.stats-grid.center-stats .stat{padding:18px 18px 16px}
+.stats-grid.center-stats .stat strong{font-size:26px}
+@media(max-width:900px){.center-hero-metrics{grid-template-columns:repeat(2,1fr)}.stats-grid.center-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.center-hero{padding:16px}.center-hero-metrics,.stats-grid.center-stats{grid-template-columns:1fr}}
+
 /* ===== Login (Center Admin / Super Admin / Finance) ===== */
 .login-screen{min-height:100vh;display:grid;place-items:center;padding:24px;background:linear-gradient(145deg,#0f1729 0%,#1a3258 45%,#243b67 100%)}
 .login-card{width:100%;max-width:420px;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 24px 60px #06122766}
