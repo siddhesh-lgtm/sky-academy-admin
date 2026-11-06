@@ -66,8 +66,8 @@ export const users=[
 ];
 /** Demo web-admin logins (same admin panel; Center Admin is center-scoped). */
 export const authAccounts:{email:string;password:string;name:string;role:Role;center:string}[]=[
-{email:'vikram@skyacademy.demo',password:'center123',name:'Vikram Desai',role:'Center Admin',center:'SKY Andheri Cricket Hub'},
 {email:'superadmin@skyacademy.demo',password:'super123',name:'SKY Platform Owner',role:'SKY Super Admin',center:'All centers'},
+{email:'vikram@skyacademy.demo',password:'center123',name:'Vikram Desai',role:'Center Admin',center:'SKY Andheri Cricket Hub'},
 {email:'finance@skyacademy.demo',password:'finance123',name:'Sneha Joshi',role:'Finance / Accounts',center:'Platform-wide'},
 ];
 export const payments=[
