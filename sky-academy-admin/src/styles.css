@@ -89,6 +89,10 @@ table{border-color:#e7edf5}thead,th{background:#f4f7fc;color:#667994;border-bott
 @media(max-width:1100px){.sidebar{width:250px;min-width:250px}.content{padding:26px 22px}.hero-decoration{opacity:.35;right:-40px}}
 @media(max-width:768px){.sidebar{box-shadow:18px 0 48px #0611276b}.mobile-backdrop{background:#0a19378c}}
 @media(max-width:700px){.content{padding:18px 13px}.page-head h1{font-size:27px}.stat strong{font-size:25px}.stat-top{font-size:12px}.stat small{font-size:11px}.panel-head h3{font-size:16px}.overview-hero{padding:25px 21px;min-height:200px}.hero-copy h2{font-size:23px}.hero-decoration{opacity:.16}.role-name{display:none}.web-access-note{padding:16px}.page-head p{font-size:14px}}
+/* V4: all editors use full-screen routed content rather than modal overlays */
+.page-textarea{width:100%;min-height:190px;border:1px solid #dbe5f1;border-radius:12px;padding:15px;background:var(--surface,#fff);color:inherit;resize:vertical;line-height:1.6;font:inherit;font-size:14px}
+.editor-layout{min-height:470px}.editor-panel{overflow:visible}.editor-fields .field{grid-column:auto}.editor-fields .field:has(.page-textarea){grid-column:1/-1}
+@media(max-width:800px){.editor-layout{display:block}.editor-guide{margin-top:16px}}
 
 /* Keep sidebar visible on typical laptop widths; prevent bottom horizontal scrollbar */
 html,body{overflow-x:hidden}
@@ -181,3 +185,32 @@ th{font-size:12.5px !important}
 .role-name b{font-size:14px !important}
 .role-name small{font-size:12px !important}
 .content{padding-top:30px}
+
+/* Academy dashboard: period + revenue + attention */
+.period-tabs{display:flex;align-items:center;gap:8px;margin:0 0 18px;flex-wrap:wrap}
+.period-tabs button{border:1px solid #dbe3ef;background:#fff;color:#4b5d78;border-radius:10px;padding:9px 14px;font-weight:700;font-size:13px}
+.period-tabs button.selected{background:#1f325d;border-color:#1f325d;color:#fff}
+.period-refresh{margin-left:auto;display:inline-flex;align-items:center;gap:7px}
+.dash-top-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,0.9fr);gap:16px;margin-bottom:18px}
+.revenue-card{background:linear-gradient(135deg,#f6c445 0%,#f0b429 55%,#e8a51a 100%);border-radius:18px;padding:22px 24px;color:#1b2433;box-shadow:0 14px 34px #d59a2033}
+.revenue-head{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;letter-spacing:.06em}
+.revenue-head small{opacity:.75;font-weight:600;letter-spacing:0}
+.revenue-card>strong{display:block;font-family:'Outfit',sans-serif;font-size:40px;line-height:1.1;margin:10px 0 16px;letter-spacing:-.03em}
+.revenue-compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.revenue-compare>div{background:#ffffffd9;border-radius:12px;padding:12px 14px}
+.revenue-compare span{display:block;font-size:11px;font-weight:800;letter-spacing:.04em;opacity:.7}
+.revenue-compare b{display:block;font-size:18px;margin:4px 0 2px;font-family:'Outfit',sans-serif}
+.revenue-compare small{font-size:12px;opacity:.75}
+.revenue-strips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.revenue-strips>div{background:#1f2a3acc;color:#fff;border-radius:10px;padding:10px 12px}
+.revenue-strips span{display:block;font-size:10px;font-weight:700;letter-spacing:.05em;opacity:.8}
+.revenue-strips b{display:block;margin-top:4px;font-size:16px;font-family:'Outfit',sans-serif}
+.attention-card{background:#fff;border:1px solid #e3e9f1;border-radius:18px;padding:18px;box-shadow:0 12px 32px #1829450a}
+.attention-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.attention-head b{font-size:16px;font-family:'Outfit',sans-serif}
+.attention-badge{background:#fff4d6;color:#9a6b10;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700}
+.attention-item{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid #e8eef6;background:#f8fafc;border-radius:12px;padding:12px 14px;margin-bottom:8px;text-align:left}
+.attention-item:hover{border-color:#c9d7ef;background:#f3f7ff}
+.attention-item b{display:block;font-size:14px;color:#1e2f4a}
+.attention-item small{display:block;margin-top:3px;font-size:12px;color:#6b7c94}
+@media(max-width:1000px){.dash-top-grid{grid-template-columns:1fr}.revenue-card>strong{font-size:34px}.revenue-strips{grid-template-columns:1fr}}
