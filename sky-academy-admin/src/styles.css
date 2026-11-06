@@ -192,23 +192,23 @@ th{font-size:12.5px !important}
 .period-tabs button.selected{background:#1f325d;border-color:#1f325d;color:#fff}
 .period-refresh{margin-left:auto;display:inline-flex;align-items:center;gap:7px}
 .dash-top-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,0.9fr);gap:16px;margin-bottom:18px}
-.revenue-card{background:linear-gradient(135deg,#f6c445 0%,#f0b429 55%,#e8a51a 100%);border-radius:18px;padding:22px 24px;color:#1b2433;box-shadow:0 14px 34px #d59a2033}
+.revenue-card{background:linear-gradient(135deg,#27d4bd 0%,#3d7cf0 48%,#3167d8 100%);border-radius:18px;padding:22px 24px;color:#fff;box-shadow:0 14px 34px #3167d833}
 .revenue-head{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;letter-spacing:.06em}
-.revenue-head small{opacity:.75;font-weight:600;letter-spacing:0}
-.revenue-card>strong{display:block;font-family:'Outfit',sans-serif;font-size:40px;line-height:1.1;margin:10px 0 16px;letter-spacing:-.03em}
+.revenue-head small{opacity:.8;font-weight:600;letter-spacing:0;color:#e8f3ff}
+.revenue-card>strong{display:block;font-family:'Outfit',sans-serif;font-size:40px;line-height:1.1;margin:10px 0 16px;letter-spacing:-.03em;color:#fff}
 .revenue-compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.revenue-compare>div{background:#ffffffd9;border-radius:12px;padding:12px 14px}
-.revenue-compare span{display:block;font-size:11px;font-weight:800;letter-spacing:.04em;opacity:.7}
-.revenue-compare b{display:block;font-size:18px;margin:4px 0 2px;font-family:'Outfit',sans-serif}
-.revenue-compare small{font-size:12px;opacity:.75}
+.revenue-compare>div{background:#ffffff22;border:1px solid #ffffff33;border-radius:12px;padding:12px 14px;color:#fff}
+.revenue-compare span{display:block;font-size:11px;font-weight:800;letter-spacing:.04em;opacity:.8}
+.revenue-compare b{display:block;font-size:18px;margin:4px 0 2px;font-family:'Outfit',sans-serif;color:#fff}
+.revenue-compare small{font-size:12px;opacity:.8}
 .revenue-strips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.revenue-strips>div{background:#1f2a3acc;color:#fff;border-radius:10px;padding:10px 12px}
+.revenue-strips>div{background:#12366ccc;color:#fff;border-radius:10px;padding:10px 12px}
 .revenue-strips span{display:block;font-size:10px;font-weight:700;letter-spacing:.05em;opacity:.8}
 .revenue-strips b{display:block;margin-top:4px;font-size:16px;font-family:'Outfit',sans-serif}
 .attention-card{background:#fff;border:1px solid #e3e9f1;border-radius:18px;padding:18px;box-shadow:0 12px 32px #1829450a}
 .attention-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .attention-head b{font-size:16px;font-family:'Outfit',sans-serif}
-.attention-badge{background:#fff4d6;color:#9a6b10;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700}
+.attention-badge{background:#e8efff;color:#3167d8;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700}
 .attention-item{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid #e8eef6;background:#f8fafc;border-radius:12px;padding:12px 14px;margin-bottom:8px;text-align:left}
 .attention-item:hover{border-color:#c9d7ef;background:#f3f7ff}
 .attention-item b{display:block;font-size:14px;color:#1e2f4a}
