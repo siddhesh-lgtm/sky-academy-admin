@@ -1,7 +1,8 @@
-import type {Role,ModuleId,Center,Passport,Session,Booking,Feature} from './types';
+import type {Role,ModuleId,Center,Passport,Session,Booking,Feature,ParentAccount} from './types';
 export const moduleMeta:{id:ModuleId;label:string;group:string;desc:string}[]=[
 {id:'dashboard',label:'Dashboard',group:'Overview',desc:'Key academy numbers and today’s operations'},
-{id:'centers',label:'Center Management',group:'Organization',desc:'Centers, applications and maker-checker approvals'},
+{id:'centers',label:'Center Management',group:'Organization',desc:'Active centers and training infrastructure'},
+{id:'applications',label:'Center Applications',group:'Organization',desc:'Maker-checker onboarding review queue'},
 {id:'users',label:'Users & Roles',group:'Organization',desc:'Web admin accounts only (3 roles)'},
 {id:'staff',label:'Staff & Coaches',group:'Organization',desc:'Center-scoped staff and coach assignments'},
 {id:'players',label:'Parents & Players',group:'Members',desc:'Guardians, children, consents and profiles'},
@@ -47,6 +48,14 @@ export const seedBookings:Booking[]=[
 {id:'BK-1004',player:'Anaya Desai',age:8,parent:'Kiran Desai',session:'Cricket Match Practice',center:'SKY Thane Cricket Academy',passport:'SKY Pro',status:'Confirmed'},
 {id:'BK-1005',player:'Kabir Singh',age:12,parent:'Meera Singh',session:'Fielding & Fitness U12',center:'SKY Bandra Cricket Center',passport:'SKY Plus',status:'Cancelled'}
 ];
+/** Parent / guardian accounts for Admin → Parents & Players (FE demo). */
+export const seedParents:ParentAccount[]=[
+{id:'PAR-1001',name:'Neha Patel',email:'neha@example.com',phone:'+91 98765 41001',city:'Mumbai',status:'Active',loginEnabled:true,password:'parent123',consentMedia:true,consentLocation:true,children:[{id:'CH-1001',name:'Aarav Patel',age:10,passport:'SKY Starter',status:'Active'}]},
+{id:'PAR-1002',name:'Pooja Shah',email:'pooja@example.com',phone:'+91 98765 41002',city:'Mumbai',status:'Active',loginEnabled:true,password:'parent123',consentMedia:true,consentLocation:false,children:[{id:'CH-1002',name:'Riya Shah',age:9,passport:'SKY Plus',status:'Active'}]},
+{id:'PAR-1003',name:'Anita Rao',email:'anita@example.com',phone:'+91 98765 41003',city:'Navi Mumbai',status:'Active',loginEnabled:true,password:'parent123',consentMedia:false,consentLocation:true,children:[{id:'CH-1003',name:'Vivaan Rao',age:11,passport:'SKY Starter',status:'Active'}]},
+{id:'PAR-1004',name:'Kiran Desai',email:'kiran@example.com',phone:'+91 98765 41004',city:'Thane',status:'Active',loginEnabled:true,password:'parent123',consentMedia:true,consentLocation:true,children:[{id:'CH-1004',name:'Anaya Desai',age:8,passport:'SKY Pro',status:'Active'}]},
+{id:'PAR-1005',name:'Meera Singh',email:'meera@example.com',phone:'+91 98765 41005',city:'Mumbai',status:'Active',loginEnabled:false,password:'parent123',consentMedia:true,consentLocation:true,children:[{id:'CH-1005',name:'Kabir Singh',age:12,passport:'SKY Plus',status:'Active'}]},
+];
 export const seedFeatures:Feature[]=[
 {id:'passport.purchase',name:'Passport Purchase',parent:true,coach:false,web:true,admin:true},
 {id:'session.booking',name:'Session Booking',parent:true,coach:true,web:false,admin:true},
@@ -61,7 +70,18 @@ export const users=[
 {name:'Sneha Joshi',email:'finance@skyacademy.demo',role:'Finance / Accounts',center:'Platform-wide',status:'Active'},
 {name:'Vikram Desai',email:'vikram@skyacademy.demo',role:'Center Admin',center:'SKY Andheri Cricket Hub',status:'Active'},
 {name:'Rahul Sharma',email:'rahul@skyacademy.demo',role:'Head Coach',center:'SKY Andheri Cricket Hub',status:'Active'},
+{name:'Amit Kulkarni',email:'amit@skyacademy.demo',role:'Coach',center:'SKY Andheri Cricket Hub',status:'Active'},
+{name:'Sonal Verma',email:'sonal@skyacademy.demo',role:'Coach',center:'SKY Andheri Cricket Hub',status:'Active'},
+{name:'Meera Iyer',email:'meera.iyer@skyacademy.demo',role:'Center Admin',center:'SKY Powai Cricket Arena',status:'Active'},
+{name:'Aditya Mehta',email:'aditya@skyacademy.demo',role:'Head Coach',center:'SKY Powai Cricket Arena',status:'Active'},
 {name:'Priya Nair',email:'priya@skyacademy.demo',role:'Coach',center:'SKY Powai Cricket Arena',status:'Active'},
+{name:'Ravi Shetty',email:'ravi@skyacademy.demo',role:'Coach',center:'SKY Powai Cricket Arena',status:'Active'},
+{name:'Karan Joshi',email:'karan@skyacademy.demo',role:'Center Admin',center:'SKY Thane Cricket Academy',status:'Active'},
+{name:'Sameer Patil',email:'sameer@skyacademy.demo',role:'Head Coach',center:'SKY Thane Cricket Academy',status:'Active'},
+{name:'Nisha Kadam',email:'nisha@skyacademy.demo',role:'Coach',center:'SKY Thane Cricket Academy',status:'Active'},
+{name:'Farhan Ali',email:'farhan@skyacademy.demo',role:'Center Admin',center:'SKY Bandra Cricket Center',status:'Active'},
+{name:'Leena Dsouza',email:'leena@skyacademy.demo',role:'Head Coach',center:'SKY Bandra Cricket Center',status:'Active'},
+{name:'Rohan Kapoor',email:'rohan@skyacademy.demo',role:'Coach',center:'SKY Bandra Cricket Center',status:'Active'},
 {name:'Neha Patel',email:'neha@example.com',role:'Parent / Guardian',center:'No fixed center',status:'Active'},
 ];
 /** Demo web-admin logins (same admin panel; Center Admin is center-scoped). */
@@ -81,5 +101,14 @@ export const activity=[
 {action:'Center application submitted',entity:'SKY Navi Mumbai Cricket',by:'Applicant',time:'8 min ago'},
 {action:'Passport purchased',entity:'SKY Starter · Aarav Patel',by:'Neha Patel',time:'21 min ago'},
 {action:'Session roster updated',entity:'Cricket Fundamentals U12',by:'Rahul Sharma',time:'47 min ago'},
-{action:'Assessment template published',entity:'Cricket Batting Skills v2',by:'Super Admin',time:'Yesterday'}
+{action:'Assessment template published',entity:'Cricket Batting Skills v2',by:'SKY Platform Owner',time:'Yesterday'},
+{action:'Web user signed in',entity:'Admin panel',by:'SKY Platform Owner',time:'2 min ago'},
+{action:'Feature flag reviewed',entity:'passport.purchase',by:'SKY Platform Owner',time:'1 hr ago'},
+{action:'Center approved',entity:'SKY Bandra Cricket Center',by:'SKY Platform Owner',time:'3 hr ago'},
+{action:'Refund queued',entity:'TXN-0918',by:'Sneha Joshi',time:'35 min ago'},
+{action:'Payment statement exported',entity:'Nov 2026 finance pack',by:'Sneha Joshi',time:'2 hr ago'},
+{action:'Failed payment flagged',entity:'TXN-0917',by:'Sneha Joshi',time:'Yesterday'},
+{action:'Session capacity updated',entity:'Cricket Fundamentals U12',by:'Vikram Desai',time:'18 min ago'},
+{action:'Staff assigned',entity:'Rahul Sharma · Head Coach',by:'Vikram Desai',time:'4 hr ago'},
+{action:'Attendance marked',entity:'Aarav Patel · Confirmed',by:'Vikram Desai',time:'Yesterday'},
 ];
